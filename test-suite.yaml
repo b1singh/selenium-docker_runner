@@ -1,18 +1,18 @@
 version: "3"
 services:
   vendor-portal:
-    image: b1singh/selenium
+    image: vinsdocker/selenium
     environment:
-    - BROWSER=chrome
+    - BROWSER
     - HUB_HOST=hub    
     - THREAD_COUNT=3
     - TEST_SUITE=vendor-portal.xml
     volumes:
     - ./output/vendor-portal:/home/selenium-docker/test-output
   flight-reservation:
-    image: b1singh/selenium
+    image: vinsdocker/selenium
     environment:
-    - BROWSER=firefox
+    - BROWSER
     - HUB_HOST=hub    
     - THREAD_COUNT=4    
     - TEST_SUITE=flight-reservation.xml
