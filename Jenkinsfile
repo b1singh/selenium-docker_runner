@@ -10,6 +10,7 @@ pipeline{
 
         stage('Start Grid'){
             steps{
+                sh "export DOCKER_API_VERSION=1.44"
                 sh "docker-compose -f grid.yaml up -d"
             }
         }
